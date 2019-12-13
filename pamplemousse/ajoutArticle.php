@@ -15,7 +15,7 @@
     
     <body>
      
-       <form>
+       <form action="soumissionArticle.php" method="POST">
         <label class="ecriture"> <b>Categorie de l'article </b></label>
              <br> 
              <select class="ecriture" name = "categorie">
@@ -37,7 +37,7 @@
           <br>  <br>
           <label class="ecriture" > <b>Prix de l'article en €</b></label>  <br>
           <input type="number" placeholder="Ex : 13 €" name ="Prix" required>
-            <br>  <br>
+           <br>  <br>
             <label class="ecriture"> <b>Votre ID Créateur</b></label> <br>
           <input type="number" placeholder="Ex : 348200 " name ="idCreateur" required>
             <br> <br>
@@ -53,44 +53,15 @@
          <input type ="submit" value="Enregistrez l'article"  name = "envoyez"/>
        
                 <br>
+         <?php
+                if(isset($_GET['erreur'])){
+                    $err = $_GET['erreur'];
+                    if($err==1 || $err==2)
+                        echo "<p class = \"ecriture\"  style='color:red'>Article non enregistré</p>";
+                }
+                ?>
        </form>
      <?php if (isset($message)) {echo $message;} ?>
-     <?php
-                $db_username = 'createur';
-                $db_password = 'Createur';
-                $db_name     = 'user';
-                $db_host     = 'localhost';
-                $db = mysqli_connect($db_host, $db_username, $db_password,$db_name) or die('could not connect to database');
-       
-       
-     if ( ! isset($_POST['nom'], $_POST['categorie'],  $_POST['idArticle'], $_POST['Prix'], $_POST['idCreateur'], $_POST['couleur'], $_POST['taille'] ))
-       {
-  
-
-//if  ($_POST['envoyez']== 'Enregistrez l\'article') {
-
-           {/* Pour sécurisez la connecxion */
-       
-            $nom = $_POST['nom'] ;
-            $categorie = $_POST['categorie'];
-            $idArticle =  $_POST['idArticle'];
-            $idPrix =  $_POST['Prix'];
-            $idCreateur =  $_POST['idCreateur'];
-            $couleur =$_POST['couleur'];
-            $taille = $_POST['taille'];
-            /*requete pour inserer l'article  */
-         echo $nom.'<br>'.$taille;  
-            $ins =$bd->prepare('INSERT INTO Article(idArticle,nom, taille, couleur, Prix, idCreateur, idCommande,categorie)
-                                VALUES (?, ?, ?, ?, ?, ? , ?)');
-            
-            $ins->execute(array ($idArticle,$nom, $taille, $couleur, $Prix, $idCreateur, $idCommande, $categorie));                
-           // echo '<li> <a href = \"validation.php\"> validez l\'article </a> </li>';
-          
-        //   }
-         
-        }
-} 
-  ?>
     </body>
    </html>
                 

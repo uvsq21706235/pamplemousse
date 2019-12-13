@@ -26,7 +26,7 @@ text-decoration: none;
 padding: 4px 0;
 }
 
-#navigation li a:hover{ /*,#navigation li a:focus, #navigation li a:active {*/
+#navigation li a:hover{
   background: #900 ;
   text-decoration: underline ;
 }
