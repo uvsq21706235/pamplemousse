@@ -44,8 +44,8 @@
            
             
         </div>
-        <?php include ("menu.php");
-			  include ("recuperation.php");
+        <?php include ("recuperation.php");
+			  include ("menu.php");
         
         ?>
         
