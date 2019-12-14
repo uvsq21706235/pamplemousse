@@ -7,7 +7,7 @@
     <body>
 <nav> 
 		<ul id = "navigation">
-            <li> <a href = "articles.php"> Acceuil </a> </li>
+            <li> <a href = "articles.php"> Accueil </a> </li>
             <br>
 			<li> <a href = "robe.php"> robe </a> </li>
 			<li> <a href = "jupe.php"> jupe </a> </li>

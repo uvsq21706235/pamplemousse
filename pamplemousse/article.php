@@ -51,30 +51,7 @@
         
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--
-
-
 <html>
     <head>
         <body>
@@ -91,13 +68,7 @@
     else {
       echo"Pas d'images";
     }*/
-    ?> 
-            
-            
-            
-            
-            
-            
+    ?>            
         </body>
         
         
