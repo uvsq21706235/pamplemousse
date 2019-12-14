@@ -1,3 +1,11 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        		<title>  Pamplemouse </title>
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    </head>
+
 <?php
 $servername = "localhost";
 $username = "Client";
@@ -25,8 +33,11 @@ if ($result->num_rows > 0) {
     // output data of each row
     echo "".$rech."<br> <br> <br>";
     while($row = $result->fetch_assoc()) {
-     /*   echo " " . $row["nom"].  "<br>";*/
-        echo "<img src=\"/pamplemousse/image/".$row['nom'].".jpg\" alt=\"".$row['nom']."\" style=\"float:right;width:220px;height:340px;\">";
+        echo "
+				<a class = \"photos\" href = \"vueArticle.php?nom=".$row['nom']."\">  
+				<img src=\"/pamplemousse/image/".$row['nom'].".jpg\" alt=\"".$row['nom']."\" style=\"float:right;width:220px;height:340px;\">
+				</a>
+			 ";
     }
 
 } else {
@@ -35,3 +46,4 @@ if ($result->num_rows > 0) {
 $conn->close();
 
 ?>
+</html>

@@ -46,8 +46,9 @@
             ?>
          
         </div>
-        <?php  include("recherche.php") ?>
-        <?php include ("menu.php") ?>
+        <?php  include("recherche.php") ;
+			   include ("recuperation.php") ;?>
+        <?php include ("menu.php") ;?>
         
    
     </body>
