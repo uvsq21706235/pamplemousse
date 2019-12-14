@@ -1,4 +1,21 @@
- <?php
+ <html>
+    <head>
+		<title>  Pamplemouse </title>
+        <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    </head>
+    
+    <div class= "position">
+             <a class="deco-button" href="menuCreateur.php?deconnexion=true"><i class="deco-button"></i> Déconnexion</a>
+             <br>
+            <!-- tester si l'utilisateur est connecté -->
+            <?php
+				include ("deconnexion.php");
+				deco();
+			?>
+	</div> 
+             <?php
                 $db_username = 'createur';
                 $db_password = 'Createur';
                 $db_name     = 'user';
@@ -28,7 +45,8 @@
 $conn = mysqli_query ($db, $sql);
 
 if ($conn === TRUE) {
-    header('Location: ajoutArticle.php');
+	echo "L'article a bien été ajouté! " ;
+	//header('Location: ajoutArticle.php');
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -45,4 +63,7 @@ if ($conn === TRUE) {
 	 {
         header('Location: ajoutArticle.php?erreur=1'); // utilisateur ou mot de passe incorrect
      }
+     
+     mysqli_close($db); // fermer la connexion
   ?>
+</html>

@@ -3,7 +3,7 @@
         <ul>
             
              <!-- Barre de recherche -->
-            <form action="/search" id="searchthis" method="get">
+            <form action="article.php" id="searchthis" method="GET">
             <input id="search" name="q" type="text" placeholder="Mot clé" />
             <input id="search-btn" type="submit" value="Rechercher" />
             </form>
