@@ -75,7 +75,12 @@
 			 ";
             
     }
-             echo "<img src=\"/pamplemousse/image/".$article.".jpg\" alt=\"".$article."\" style=\"float:center;width:350px;height:540px;\">";
+             echo "
+             <a class = \"photos\" href = \"choixTaille.php?nom=".$article."\">  
+				<img src=\"/pamplemousse/image/ajouter.png\" alt=\"ajouter au panier\" style=\"float:right;width:80px;height:80px;\">
+				</a>
+             <img src=\"/pamplemousse/image/".$article.".jpg\" alt=\"".$article."\" style=\"float:center;width:350px;height:540px;\">
+             ";
 } else {
     echo "aucun résultat n'a été trouvé pour la recherche \" ".$rech." \"";
 }

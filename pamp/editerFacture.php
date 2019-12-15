@@ -8,9 +8,7 @@
 
                 $commande = $_GET['id'];
                 $today = date("Y-n-j");
-                echo $today;
                 $id = rand ( 50 , 9999 );
-                echo $id;
                 $sql = "SELECT idCommande FROM Commande WHERE idCommande = 5".$id."";
                 $result = $db->query($sql);
                                 
@@ -18,7 +16,7 @@
 						 (5".$id.", '".$today."', ".$commande.") ";
 				$result = $db->query($sql);
 				if ($result){
-				header('Location: menuPreparateur.php');
+				header('Location: accueilPreparateur.php');
 				} else {
 					header ('Location: editerFacture.php?id=".$commande."');
 				}

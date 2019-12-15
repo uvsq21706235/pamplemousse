@@ -17,6 +17,8 @@
             <li> <a href = "articlesMenu.php? param=tee-shirt"> Tee-shirt </a> </li>
             <li> <a href = "articlesMenu.php? param=pull"> Pull </a> </li>
             <li> <a href = "articlesMenu.php? param=Jean"> Jean </a> </li>
+            <br>
+            <li> <a href = "panier.php"> Mon panier </a> </li>
      <?php
             
      ?>
