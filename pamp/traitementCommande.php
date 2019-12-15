@@ -36,7 +36,7 @@
                         echo "Bonjour, $reponse[nom] $reponse[prenom] !";
                 }
                 
-                include ("menuPrep.php");
+                include ("menuPreparateur.php");
                 
                 $sql = "SELECT date, idCommande FROM Commande WHERE idPreparateur is NULL  
 						ORDER BY `Commande`.`date`  ASC ";

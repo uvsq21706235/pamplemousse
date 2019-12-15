@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
     }
 
 } else {
-    echo "aucun résultat n'a été trouvé pour la recherche \" ".$rech." \"";
+    echo "<div align=\"center\"> <font size=\"+3\">aucun résultat n'a été trouvé pour la recherche \" ".$rech." \"</font></div>";
 }
 $conn->close();
 

@@ -34,7 +34,7 @@
             
                         echo "Bonjour, $reponse[nom] $reponse[prenom] !";
                 }
-                include ("menuPrep.php");
+                include ("menuPreparateur.php");
                 
                 $sql = "SELECT idCommande FROM Commande WHERE idCommande NOT IN (SELECT DISTINCT idCommande FROM Facture) ";
 				
